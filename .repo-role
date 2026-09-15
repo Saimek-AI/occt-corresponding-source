@@ -1,0 +1,18 @@
+name: occt-corresponding-source
+mode: vendored
+org: Saimek-AI
+role: |
+  LGPL-2.1 Corresponding Source for the OpenCASCADE (OCCT) WebAssembly module that Saimek
+  distributes, in compiled form, inside Saimek3D. A compliance artifact, not a product:
+  third-party source vendored verbatim under `occt/`, plus the `build-recipe/` that ties
+  the shipped binary to that source (opencascade.js + replicad-opencascadejs 0.23.0).
+notes: |
+  PUBLIC by necessity — LGPL-2.1 puts the obligation to supply Corresponding Source on the
+  distributor, which is Saimek. The bytes live here rather than behind an upstream link
+  that can rot when a tag is renamed or a snapshot removed.
+
+  Nothing here is written or owned by Saimek, and it is not maintained as a product. Do
+  NOT update, refactor or tidy the vendored tree: its entire value is that it corresponds,
+  by measured sha256, to the WASM actually shipped — `2e07c45b…` matched exactly one file
+  across all 27 published versions of replicad-opencascadejs (`src/replicad_single.wasm`
+  in 0.23.0). Changing it breaks the compliance chain the README documents.
